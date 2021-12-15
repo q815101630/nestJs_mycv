@@ -10,11 +10,7 @@ async function bootstrap() {
       keys: ['super'], //for encryption purpose
     }),
   );
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true, // means: only allow those I defined in DTO to be validate
-    }),
-  );
+
   await app.listen(3000);
 }
 bootstrap();
