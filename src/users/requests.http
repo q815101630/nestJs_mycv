@@ -1,0 +1,39 @@
+### Sign up a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "123@qq.com",
+    "password": "123123123"
+}
+
+### Sign in a user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "123@qq.com",
+    "password": "123123123"
+}
+### Get user info
+GET http://localhost:3000/auth/me
+
+### Sign out a user
+POST http://localhost:3000/auth/signout
+
+### Find a particular user
+GET http://localhost:3000/auth/2
+
+### Find all users with a given email
+GET http://localhost:3000/auth/?email=abc@example.com
+
+### Delete a user with a given id
+DELETE http://localhost:3000/auth/11
+
+### Update a user with a given id
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email": "123@1123.com"
+}
