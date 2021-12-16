@@ -1,0 +1,41 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "toyota",
+    "model": "camry",
+    "year": 2016,
+    "mileage": 10000,
+    "lng": "-122.4194155",
+    "lat": "37.7749295",
+    "price": 10000
+}
+
+
+### Sign up a user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "123@qq.com",
+    "password": "123123123"
+}
+
+### Sign in a user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "123@qq.com",
+    "password": "123123123"
+}
+### Change approve status
+PATCH http://localhost:3000/reports/1
+Content-Type: application/json
+
+{
+    "approved":true
+}
+
+### Get an estimate
+GET http://localhost:3000/reports?make=toyota&model=camry&year=2016&mileage=10000&lng=-122.4194155&lat=37.7749295

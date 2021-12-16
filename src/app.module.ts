@@ -55,6 +55,6 @@ export class AppModule {
           keys: ['super'], //for encryption purpose
         }),
       )
-      .forRoutes('*');
+    .forRoutes('*');
   }
 }
